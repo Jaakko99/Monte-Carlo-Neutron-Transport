@@ -21,9 +21,9 @@ and the "critical mass" required for a sustained reaction.
 1) ρ (Density): 19.1 g/cm³ (U-235)
 2) σ (Cross Section): ~1.2 barns (Fast Fission)
 3) λ (Mean Free Path): ~17.3 cm
-## Key Logic: The simulation uses a logarithmic transformation of random variables to determine travel distance: d = -λ ln(R)
+-- Key Logic: The simulation uses a logarithmic transformation of random variables to determine travel distance: d = -λ ln(R)
 
-## Future Roadmap: 
-​[ ] Implement Multi-threading (OpenMP) to handle 10^7+ neutrons,
-​[ ] Add Reflector Geometry (simulating a Beryllium "tamper" to bounce neutrons back),
-​[ ] Export data to .csv for visualization in Python/Matplotlib.
+## Technical Implementation:
+1) ​[ ] Implement Multi-threading (OpenMP) to handle 10^7+ neutrons,
+2) ​[ ] Add Reflector Geometry (simulating a Beryllium "tamper" to bounce neutrons back),
+3) ​[ ] Export data to .csv for visualization in Python/Matplotlib.
