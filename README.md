@@ -23,6 +23,12 @@ and the "critical mass" required for a sustained reaction.
 3) λ (Mean Free Path): ~17.3 cm
 -- Key Logic: The simulation uses a logarithmic transformation of random variables to determine travel distance: d = -λ ln(R)
 
+
+![Fission Simulation Output](fission_plot.png)
+
+
+
+
 ## Technical Implementation:
 1) ​[ ] Implement Multi-threading (OpenMP) to handle 10^7+ neutrons,
 2) ​[ ] Add Reflector Geometry (simulating a Beryllium "tamper" to bounce neutrons back),
