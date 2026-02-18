@@ -25,7 +25,7 @@ It serves as a practical application of several key concepts: - ​**Stochastic 
 - **λ (Mean Free Path):** ~17.3 cm  
 - **Key Logic:** The simulation uses a logarithmic transformation of random variables to determine travel distance: `d = -λ ln(R)`
 
-### ​🚀 Future Roadmap  
+### Future Roadmap  
 1) ​[ ] Implement **Multi-threading** (OpenMP) to handle 10^7+ neutrons.
 2) ​[ ] Add **Reflector Geometry** (simulating a Beryllium "tamper" to bounce neutrons back).
 3) [ ] Export data to .csv for visualization in Python/Matplotlib."
