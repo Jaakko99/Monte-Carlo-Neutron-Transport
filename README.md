@@ -27,13 +27,13 @@ and the "critical mass" required for a sustained reaction.
 ## Output
 
 The simulation exports fission event coordinates to `fissions.csv`, which can be visualized. But first compile and run the app
-# Compile the C++
+1) Compile the C++
 g++ N.particle.cpp -o neutron_sim.exe
-# Run the C++ simulation
+2)  Run the C++ simulation
 ./neutron_sim
-# Visualize fission locations in 3D
+3)  Visualize fission locations in 3D
 python fissions.py
-The visualization shows fission events (red points) within the uranium sphere boundary (gray wireframe), revealing the spatial distribution of the chain reaction.
+4) Then the visualization shows fission events (red points) within the uranium sphere boundary (gray wireframe), revealing the spatial distribution of the chain reaction.
 
 ![Fission Simulation Output](fission_plot.png)
 
