@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load fission data from CSV
-df = pd.read_csv('fissions.csv')
+df = pd.read_csv('fissions.csv', names=['x', 'y', 'z'])
 
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
