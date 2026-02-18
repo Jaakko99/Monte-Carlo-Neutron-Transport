@@ -24,7 +24,8 @@ and the "critical mass" required for a sustained reaction.
 -- Key Logic: The simulation uses a logarithmic transformation of random variables to determine travel distance: d = -λ ln(R)
 
 
-![Fission Simulation Output](fission_plot.png)
+## Fission Simulation Output
+(fission_plot.png)
 
 
 
