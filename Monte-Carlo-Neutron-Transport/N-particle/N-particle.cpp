@@ -4,6 +4,15 @@
 #include <random>
 #include <fstream>
 
+/* TODO: 1) Add new logic to track neutron energy and its effect on fission probability and mean free path.
+         2) Implement a more realistic fission model where the number of neutrons produced follows a distribution
+        (e.g., Poisson) rather than a fixed number.
+         3) Add a simple geometry to the simulation, such as a cylindrical fuel rod,
+         and track neutron interactions with the geometry.
+         4) Implement neutron capture and scattering events in addition to fission,
+        and track their effects on the neutron population and energy distribution.
+        */
+
 // Define Pi for math calculations
 const double PI = 3.14159265358979323846;
 
@@ -65,15 +74,11 @@ int main()
 
             // 3. Collision Fission or Capture?
             if (dist(rng) < 0.85)
-            {                                                          // 85% chance of fission
-                next_gen.push_back(Neutron{n.x, n.y, n.z, 0, 0, 0});   // New neutron from fission
-                next_gen.push_back(Neutron{n.x, n.y, n.z, 0, 0, 0});   // New neutron from fission
-                dataFile << n.x << "," << n.y << "," << n.z << "\n";   // Write fission position
-                dataFile << n.x << "," << n.y << "," << n.z << "\n"; // Record the "Boom" location
-                next_gen.push_back(Neutron{n.x, n.y, n.z});
-                next_gen.push_back(Neutron{n.x, n.y, n.z});
-
-                // Note: We add two new ones (simplified multiplication)
+            {                                                        // 85% chance of fission
+                next_gen.push_back(Neutron{n.x, n.y, n.z, 0, 0, 0}); // New neutron from fission
+                next_gen.push_back(Neutron{n.x, n.y, n.z, 0, 0, 0}); // New neutron from fission
+                dataFile << n.x << "," << n.y << "," << n.z << "\n"; // Write fission position
+                dataFile << n.x << "," << n.y << "," << n.z << "\n"; // Record the "Boom" location        
             }
             else
             {
