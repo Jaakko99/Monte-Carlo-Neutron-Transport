@@ -20,7 +20,7 @@ struct Neutron
 {
     double x = 0, y = 0, z = 0; // Start at center (0,0,0)
     double dx, dy, dz;          // Direction vector
-    bool alive = true;          // Neutron is alive until it interacts
+    int alive = 1;              // Neutron is alive until it interacts, this is now percentage chance of fission (0-100)
 };
 
 int main()
@@ -68,7 +68,7 @@ int main()
             double r = std::sqrt(n.x * n.x + n.y * n.y + n.z * n.z);
             if (r > core_radius)
             {
-                n.alive = false; // Neutron escaped
+                n.alive = 0; // Neutron escaped
                 continue;
             }
 
@@ -82,7 +82,7 @@ int main()
             }
             else
             {
-                n.alive = false; // Neutron captured, no new neutrons
+                n.alive = 0; // Neutron captured, no new neutrons
             }
         }
 
