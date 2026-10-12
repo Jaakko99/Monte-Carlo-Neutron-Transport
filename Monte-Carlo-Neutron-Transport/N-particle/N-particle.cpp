@@ -78,7 +78,8 @@ int main()
                 next_gen.push_back(Neutron{n.x, n.y, n.z, 0, 0, 0}); // New neutron from fission
                 next_gen.push_back(Neutron{n.x, n.y, n.z, 0, 0, 0}); // New neutron from fission
                 dataFile << n.x << "," << n.y << "," << n.z << "\n"; // Write fission position
-                dataFile << n.x << "," << n.y << "," << n.z << "\n"; // Record the "Boom" location        
+                dataFile << n.x << "," << n.y << "," << n.z << "\n"; // Record the "Boom" location     
+                dataFile << g << "," << n.x << "," << n.y << "," << n.z << "\n";   
             }
             else
             {

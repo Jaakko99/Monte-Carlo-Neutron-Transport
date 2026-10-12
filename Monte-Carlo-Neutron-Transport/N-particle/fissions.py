@@ -20,4 +20,4 @@ z = 8.7 * np.cos(v)
 ax.plot_wireframe(x, y, z, color="gray", alpha=0.1)
 
 plt.title('Fission Locations in Uranium Sphere')
-plt.show()
+plt.savefig('fissions.png', dpi=150)
